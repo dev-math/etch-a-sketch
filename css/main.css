@@ -1,0 +1,25 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  text-align: center;
+}
+
+.game {
+  border: solid 50px #f00;
+  border-radius: 10px;
+  box-sizing: content-box;
+  height: 400px;
+}
+
+.square {
+  border: solid 1px #000;
+}
