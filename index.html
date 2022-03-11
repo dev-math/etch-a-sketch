@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Etch a Sketch</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/main.css" rel="stylesheet">
-    <script src="game.js" defer></script>
-  </head>
-  <body>
-    <main>
-      <div class="game"></div>
-    </main>
-    <footer>
-      Made by <a href="https://github.com/dev-math" target="_blank">@dev-math</a>
-    </footer>
-  </body>
+
+<head>
+  <title>Etch a Sketch</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="game.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <h1>Etch a Sketch</h1>
+    <div class="game-grid">
+    </div>
+
+    <div class="settings-ui">
+      <div class="settings-item">
+        <label for="selectcolor">Choose an color: </label>
+        <input type="color" name="selectcolor" value="#aaaaaa" id="color-input">
+      </div>
+
+      <div class="settings-item">
+        <label for="selectgrid">Enter the grid size: </label>
+        <input type="text" name="selectgrid" value="16x16" id="gridsize-input" placeholder="16x16">
+      </div>
+
+      <div class="settings-item">
+        <button type="button" id="reset-btn">Clear</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    Made by <a href="https://github.com/dev-math" target="_blank">@dev-math</a>
+  </footer>
+</body>
+
 </html>

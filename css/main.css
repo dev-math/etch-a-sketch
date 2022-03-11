@@ -13,13 +13,25 @@ body {
   text-align: center;
 }
 
-.game {
-  border: solid 50px #f00;
+main {
+  background-color: #f00;
   border-radius: 10px;
-  box-sizing: content-box;
-  height: 400px;
+  margin: 0 auto;
+  padding: 1em;
+  width: 30em;
+}
+
+.settings-item {
+  padding-top: 10px;
+}
+
+.game-grid {
+  display: grid;
 }
 
 .square {
+  background: #fff;
   border: solid 1px #000;
+  height: 20px;
+  width: 100%;
 }
