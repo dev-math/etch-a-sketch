@@ -3,6 +3,10 @@ const grid = document.querySelector(".game-grid");
 const gridSizeInput = document.getElementById("gridsize-input");
 const resetBtn = document.getElementById("reset-btn");
 
+colorInput.onchange = () => resetGame();
+gridSizeInput.onchange = () => resetGame();
+resetBtn.onclick = () => resetGame();
+
 let currentColor = "#000000";
 let currentGridSize = "16x16";
 
@@ -12,13 +16,12 @@ function createGrid() {
     grid.style.gridTemplateColumns = `repeat(16,1fr)`;
     const gridSquare = document.createElement("div");
     gridSquare.classList.add("square");
-    gridSquare.addEventListener("mouseover", () => console.log('hoho'));
+    gridSquare.addEventListener("mouseover", () => console.log('test'));
     grid.appendChild(gridSquare);
   }
 }
 
 function resetGame() {
-
 }
 
 createGrid()
