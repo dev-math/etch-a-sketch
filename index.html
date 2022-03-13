@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/main.css" rel="stylesheet">
   <script src="game.js" defer></script>
+  <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -17,13 +18,14 @@
 
     <div class="settings-ui">
       <div class="settings-item">
-        <label for="selectcolor">Choose an color: </label>
-        <input type="color" name="selectcolor" value="#aaaaaa" id="color-input">
+        <label for="color-input">Choose an color: </label>
+        <input type="color" name="color-input" value="#aaaaaa" id="color-input">
       </div>
 
       <div class="settings-item">
-        <label for="selectgrid">Enter the grid size: </label>
-        <input type="text" name="selectgrid" value="16x16" id="gridsize-input" placeholder="16x16">
+        <label for="gridsize-input">Enter the grid size: </label>
+        <input type="range" name="gridsize-input" id="gridsize-input" list="grid-options" step="16" min="16" max="96" value="16">
+        <output class="range-bubble"></output>
       </div>
 
       <div class="settings-item">

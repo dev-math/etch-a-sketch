@@ -35,3 +35,12 @@ main {
   height: 20px;
   width: 100%;
 }
+
+.range-bubble {
+  background: blue;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
