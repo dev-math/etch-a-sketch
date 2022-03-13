@@ -3,36 +3,33 @@ const grid = document.querySelector(".game-grid");
 const gridSizeInput = document.getElementById("gridsize-input");
 const resetBtn = document.getElementById("reset-btn");
 
-// colorInput.onchange = () => resetGame();
-// gridSizeInput.onchange = () => resetGame();
+colorInput.onchange = () => gridForeground = colorInput.value;
+gridSizeInput.onchange = () => createGrid(gridSizeInput.value);
 resetBtn.onclick = () => resetDrawing();
 
-let currentColor = "#000000";
-let currentGridSize = "16x16";
+let gridBackground = "#ffffff";
+let gridForeground = "#aaaaaa";
 
-// temp
-let gridc = 16;
-let gridr = 16;
-let gridBackgroundColor = "#ffffff";
-
-function createGrid() {
-  for (let index = 0; index < 16 * 16; index++) {
-    grid.style.gridTemplateRows = `repeat(${gridr},1fr)`;
-    grid.style.gridTemplateColumns = `repeat(${gridc},1fr)`;
+function createGrid(gridSize) {
+  const squares = document.querySelectorAll('.square');
+  squares.forEach(element => element.remove());
+  for (let index = 0; index < gridSize ** 2; index++) {
+    grid.style.gridTemplateRows = `repeat(${gridSize},1fr)`;
+    grid.style.gridTemplateColumns = `repeat(${gridSize},1fr)`;
     const gridSquare = document.createElement("div");
     gridSquare.classList.add("square");
-    gridSquare.addEventListener("mouseover", () => gridSquare.style.background = "#f00");
+    gridSquare.addEventListener("mouseover", () => paintSquare(gridSquare));
     grid.appendChild(gridSquare);
   }
 }
 
 function resetDrawing() {
   const gridSquares = document.querySelectorAll('.square');
-  gridSquares.forEach(element => element.style.background = gridBackgroundColor);
+  gridSquares.forEach(element => element.style.background = gridBackground);
 }
 
-function changeGrid() {
-  
+function paintSquare(square) {
+  square.style.background = gridForeground;
 }
 
-createGrid()
+createGrid(16);
