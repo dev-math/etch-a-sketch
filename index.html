@@ -5,6 +5,9 @@
   <title>Etch a Sketch</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins&display=swap" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <script src="game.js" defer></script>
   <script src="main.js" defer></script>
@@ -12,20 +15,19 @@
 
 <body>
   <main>
-    <h1>Etch a Sketch</h1>
+    <h1>- Etch a Sketch -</h1>
     <div class="game-grid">
     </div>
 
     <div class="settings-ui">
       <div class="settings-item">
-        <label for="color-input">Choose an color: </label>
-        <input type="color" name="color-input" value="#aaaaaa" id="color-input">
+        <output class="range-bubble"></output>
+        <input type="range" name="gridsize-input" id="gridsize-input" list="grid-options" step="16" min="16" max="96" value="16">
       </div>
 
       <div class="settings-item">
-        <label for="gridsize-input">Enter the grid size: </label>
-        <input type="range" name="gridsize-input" id="gridsize-input" list="grid-options" step="16" min="16" max="96" value="16">
-        <output class="range-bubble"></output>
+        <label for="color-input">Choose an color: </label>
+        <input type="color" name="color-input" value="#aaaaaa" id="color-input">
       </div>
 
       <div class="settings-item">

@@ -9,38 +9,112 @@
   margin: 0;
 }
 
+body,
+html {
+  height: 100%;
+}
+
+:root {
+  --color-shadow: 55, 6, 23;
+}
+
 body {
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  justify-content: space-around;
   text-align: center;
 }
 
+h1 {
+  color: rgb(255, 186, 8);
+  font-family: 'Permanent Marker', cursive;
+}
+
 main {
-  background-color: #f00;
+  background-color: #d00000;
   border-radius: 10px;
+  box-shadow: 0.4em 0.4em 0 #b80008 inset, -0.4em -0.4em 0 #970007 inset,
+    rgba(var(--color-shadow), 0.4) -5px 5px,
+    rgba(var(--color-shadow), 0.3) -10px 10px,
+    rgba(var(--color-shadow), 0.2) -15px 15px,
+    rgba(var(--color-shadow), 0.1) -20px 20px,
+    rgba(var(--color-shadow), 0.05) -25px 25px;
   margin: 0 auto;
   padding: 1em;
-  width: 30em;
+  min-width: 30em;
 }
 
 .settings-item {
   padding-top: 10px;
 }
 
-.game-grid {
-  display: grid;
-}
-
-.square {
-  background: #fff;
-  border: solid 1px #000;
-  height: 20px;
+input[type="range"] {
+  margin: 10px;
   width: 100%;
 }
 
 .range-bubble {
-  background: blue;
-  color: white;
+  background: rgb(255, 186, 8);
   padding: 4px 12px;
   border-radius: 4px;
-  left: 50%;
   transform: translateX(-50%);
+}
+
+input[type="color"] {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+button:hover {
+  background-color: rgb(255, 186, 8);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.game-grid {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  display: grid;
+  height: 25em;
+  width: 35em;
+}
+
+.square {
+  background: #fff;
+}
+
+footer a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
 }

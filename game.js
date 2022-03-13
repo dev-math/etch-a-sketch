@@ -11,8 +11,7 @@ let gridBackground = "#ffffff";
 let gridForeground = "#aaaaaa";
 
 function createGrid(gridSize) {
-  const squares = document.querySelectorAll('.square');
-  squares.forEach(element => element.remove());
+  resetGrid();
   for (let index = 0; index < gridSize ** 2; index++) {
     grid.style.gridTemplateRows = `repeat(${gridSize},1fr)`;
     grid.style.gridTemplateColumns = `repeat(${gridSize},1fr)`;
@@ -21,6 +20,10 @@ function createGrid(gridSize) {
     gridSquare.addEventListener("mouseover", () => paintSquare(gridSquare));
     grid.appendChild(gridSquare);
   }
+}
+
+function resetGrid() {
+  grid.innerHTML = "";
 }
 
 function resetDrawing() {
