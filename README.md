@@ -2,7 +2,7 @@
 
 Proposed by [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project)
 
-[Live Preview](https://htmlpreview.github.io/?https://raw.githubusercontent.com/dev-math/etch-a-sketch/main/index.html)
+[Live Preview](https://dev-math.github.io/etch-a-sketch/)
 
 ## Screenshot
 
